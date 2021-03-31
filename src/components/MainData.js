@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tabletop from 'tabletop';
+import "./MainData.css"
 
 class MainData extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class MainData extends Component {
 
   componentDidMount() {
     Tabletop.init({
-      key: '2PACX-1vRYU1EcMD-GP7U4y1s6NfkqPum8h07qlrGE-Fx-aFpJkH_LGz5o9QsTOBWfzV0-HU5nh74aVFW8VO0w',
+      key: '1Le7hMqttAYMrj8YQ4lojO-rGVsh0MLyig7LWB7RwCuQ',
       callback: googleData => {
         this.setState({
           data: googleData
@@ -22,12 +23,24 @@ class MainData extends Component {
   }
 
   render() {
-    console.log('updated state --->', this.state)
+    console.log('Updated state --->', this.state)
+    const { data } = this.state
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">React + Google Sheets Demo</h1>
-        </header>
+      <div className="MainData">
+        <div id="dataRows">
+          {
+            data.map(obj => {
+              return (
+                <div className="inlineDiv" key={obj.g_prof_url}>
+                    <i className={obj.g_prof_icon}></i>
+                    <p>{obj.g_prof_name}</p>
+                    <p>{obj.g_prof_count.slice(8)}</p>
+                    <br />
+                </div>
+              )
+            })
+          }
+        </div>
       </div>
     );
   }
