@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Aktuálne výsledky* z <a target="_blank" rel="noreferrer" href="https://www.profesia.sk/">profesia.sk</a></h2>
-        <p className="vysvetlivka">*Dáta sú zobrazené podľa počtu výsledkov</p>
+        <p className="vysvetlivka">*Dáta sú zobrazené podľa počtu výsledkov s názvom jazyku. Výsledky nemusia byť presné.</p>
       </header>
       <main>
 
