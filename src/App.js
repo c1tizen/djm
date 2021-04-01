@@ -1,5 +1,6 @@
 import MainData from "./components/MainData"
 import './App.css';
+import PieData from "./components/PieData"
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <p className="vysvetlivka">*Dáta sú zobrazené podľa počtu výsledkov</p>
       </header>
       <main>
+
         <MainData />
       </main>
     </div>
